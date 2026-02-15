@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>POLARIS</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+    margin:0;
+    font-family: Helvetica, 'Inter', sans-serif;
+    background:#f5f5f5;
+    color:#333;
+    font-size:20px;   /* ← ここを追加（今が16px想定） */
+}
+
+
+.container{
+    max-width:480px;
+    margin:0 auto;
+    background:white;
+}
+
+/* HEADER */
+
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px;
+}
+
+.logo{
+    font-weight:bold;
+}
+
+/* BANNER */
+
+.banner{
+    height:200px;
+    background:#222;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.grid-buttons{
+    display:flex;
+    flex-direction:column; /* 縦並び */
+    gap:15px;
+    padding:0 20px 30px;
+}
+
+.grid-item{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    height:140px;
+    color:white;
+    text-decoration:none;
+    font-family:'Inter', sans-serif;
+
+    background-size:cover;
+    background-position:center;
+    position:relative;
+}
+
+/* 文字を読みやすくするための薄い黒レイヤー */
+.grid-item::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.4);
+}
+
+.grid-item span{
+    position:relative;
+    z-index:1;
+}
+
+
+/* SECTION TITLE */
+
+.section-title{
+    text-align:center;
+    color:#B086CF;
+    font-weight:600;
+    margin:30px 0 15px;
+    font-family:'Inter', sans-serif;
+}
+
+/* ABOUT */
+
+.about{
+    padding:0 20px 20px;
+    line-height:1.6;
+}
+
+.carousel{
+  position:relative;
+  padding:0 20px 30px;
+}
+
+.carousel-viewport{
+  overflow:hidden;
+}
+
+.carousel-track{
+  display:flex;
+  transition:transform 0.25s ease;
+}
+
+.carousel-slide{
+  min-width:100%;
+  position:relative;
+}
+
+.carousel-slide img{
+  width:100%;
+  display:block;
+}
+
+.carousel-caption{
+  position:absolute;
+  left:50%;
+  bottom:12px;
+  transform:translateX(-50%);
+  background:rgba(255,255,255,0.9);
+  color:#333;
+  padding:6px 14px;
+  font-family:'Inter', sans-serif;
+}
+
+.carousel-btn{
+  position:absolute;
+  top:45%;
+  transform:translateY(-50%);
+  background:rgba(176,134,207,0.25);
+  border:none;
+  width:36px;
+  height:36px;
+  border-radius:999px;
+
+  line-height:36px;
+  text-align:center;
+  color:#44334f;
+  cursor:pointer;
+}
+
+.carousel-btn{
+    display:none;
+}
+
+
+.carousel-btn.prev{ left:10px; }
+.carousel-btn.next{ right:10px; }
+
+.carousel-dots{
+  display:flex;
+  justify-content:center;
+  gap:8px;
+  margin-top:12px;
+}
+
+.dot{
+  width:8px;
+  height:8px;
+  border-radius:999px;
+  border:none;
+  background:rgba(176,134,207,0.35);
+  cursor:pointer;
+}
+
+.dot.active{
+  background:#B086CF;
+}
+
+
+/* SYSTEM */
+
+.system{
+    padding:0 20px 20px;
+}
+
+.system-item{
+    text-align:center;
+    padding:12px 0;
+    margin-bottom:10px;
+    font-size:14px;
+}
+
+/* 奇数（1,3,5...）紫 40%透過 */
+.system-item:nth-child(odd){
+    background: rgba(176, 134, 207, 0.4);
+    color:#333;
+}
+
+/* 偶数（2,4,6...）白 */
+.system-item:nth-child(even){
+    background:#ffffff;
+    color:#333;
+}
+
+
+/* DISCOUNT TEXT */
+
+.discount{
+    color:#d81c1c;
+    text-align:center;
+    font-size:12px;
+    padding:10px 20px 30px;
+}
+
+/* RESERVATION */
+
+.reservation{
+    padding:20px;
+    font-size:13px;
+    text-align:center;
+}
+
+/* FAQ */
+
+.faq{
+    font-size:15px;
+    padding:0 20px 30px;
+}
+
+.faq-item{
+    border-top:1px solid #ddd;
+}
+
+.faq-question{
+    padding:13px 0;
+    cursor:pointer;
+    position:relative;
+}
+
+/* ホバー時（15%透明の紫） */
+.faq-question:hover{
+    background: rgba(176, 134, 207, 0.15);
+}
+
+.faq-answer{
+    display:none;
+    padding:0 0 15px 0;
+    font-size:15px;
+    line-height:1.6;
+    color: rgba(0,0,0,0.6);   /* 80%の黒 */
+}
+
+/* 矢印 */
+.faq-question::after{
+    content: "▾";
+    position:absolute;
+    right:0;
+    top:50%;
+    transform:translateY(-50%);
+    color:#B086CF;
+    transition:transform 0.2s ease;
+}
+
+/* 開いた時に回転 */
+.faq-question.active::after{
+    transform:translateY(-50%) rotate(180deg);
+}
+
+
+
+
+/* INFO */
+
+.info{
+    padding:0 20px 30px;
+    font-size:13px;
+}
+
+.info-item{
+    margin-bottom:15px;
+}
+
+/* MAP */
+
+.map{
+    height:200px;
+    background:#ccc;
+    margin:20px 0;
+}
+
+/* CONTACT */
+
+.contact{
+    padding:0 20px 40px;
+}
+
+.contact input,
+.contact textarea{
+    width:100%;
+    padding:10px;
+    margin-bottom:15px;
+    border:1px solid #ccc;
+    font-family:'Inter', sans-serif;
+}
+
+.required-badge{
+    display:inline-block;
+    background:#d81c1c;
+    color:white;
+    font-size:12px;
+    padding:2px 8px;
+    border-radius:4px;
+    margin-left:8px;
+    font-family:'Inter', sans-serif;
+}
+
+.submit{
+    background: linear-gradient(
+        90deg,
+        #44334f 0%,
+        #b086cf 100%
+    );
+    color:white;
+    text-align:center;
+    padding:14px 0;
+    font-weight:600;
+    font-size:18px;
+    border-radius:999px;
+    font-family:'Inter', sans-serif;
+    width:50%;             
+    margin:20px auto 0;    
+
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <div class="logo">POLARIS</div>
+        <div class="instagram">Instagram</div>
+    </div>
+
+    <div class="banner">
+        バナーが入る
+    </div>
+
+    <div class="section-title">ABOUT US</div>
+
+    <div class="about">
+        Japan’s oldest soapland group, Kadoebi, proudly presents Polaris in Ikebukuro.
+        A paradise for adults where young and cute girls gather.
+        Located just 3 minutes walk from the East Exit of Ikebukuro Station.
+    </div>
+
+  <div class="grid-buttons">
+
+    <a href="#" class="grid-item" style="background-image:url('img1.jpg');">
+        <span>出勤情報</span>
+    </a>
+
+    <a href="#" class="grid-item" style="background-image:url('img2.jpg');">
+        <span>女の子一覧</span>
+    </a>
+
+<div class="carousel" id="storeCarousel" aria-label="Store photos carousel">
+  <button class="carousel-btn prev" type="button" aria-label="Previous">‹</button>
+
+  <div class="carousel-viewport">
+    <div class="carousel-track">
+      <div class="carousel-slide">
+        <img src="./s1.jpg" alt="Lounge">
+        <div class="carousel-caption">Lounge</div>
+      </div>
+      <div class="carousel-slide">
+        <img src="./s2.jpg" alt="Reception area">
+        <div class="carousel-caption">Reception area</div>
+      </div>
+      <div class="carousel-slide">
+        <img src="./s3.jpg" alt="Hallway">
+        <div class="carousel-caption">Hallway</div>
+      </div>
+    </div>
+  </div>
+
+  <button class="carousel-btn next" type="button" aria-label="Next">›</button>
+
+  <div class="carousel-dots">
+    <button type="button" class="dot active"></button>
+    <button type="button" class="dot"></button>
+    <button type="button" class="dot"></button>
+  </div>
+</div>
+
+
+</div>
+
+
+    <div class="section-title">SYSTEM</div>
+
+    <div class="system">
+        <div class="system-item">50min</div>
+        <div class="system-item">¥28,000</div>
+        <div class="system-item">50min</div>
+        <div class="system-item">¥28,000</div>
+    </div>
+
+    <div class="discount">
+        Customers who can speak Japanese at a conversational level or higher
+        are eligible for a discount of up to ¥10,000.
+    </div>
+
+    <div class="section-title">RESERVATION</div>
+
+    <div class="reservation">
+        Reservations are accepted by phone or in person.
+        We don’t accept reservations via email or DM.
+    </div>
+
+<div class="section-title">FAQ</div>
+
+<div class="faq">
+
+    <div class="faq-item">
+        <div class="faq-question">OUR DMS ARE NOW OPEN?</div>
+        <div class="faq-answer">
+            Yes, our DMs are open. However, we do not respond to reservation inquiries via DM.
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">HOW CAN I MAKE A RESERVATION?</div>
+        <div class="faq-answer">
+            Reservations are accepted by phone or in person only.
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">DO YOU ACCEPT WALK-INS?</div>
+        <div class="faq-answer">
+            Yes, walk-ins are welcome depending on availability.
+        </div>
+    </div>
+
+</div>
+
+    <div class="section-title">INFO</div>
+
+    <div class="info">
+        <div class="info-item">
+            <strong>Name</strong><br>
+            POLARIS
+        </div>
+
+        <div class="info-item">
+            <strong>Type of Business</strong><br>
+            Soapland
+        </div>
+
+        <div class="info-item">
+            <strong>Business Hours</strong><br>
+            9:00 AM – 12:00 AM
+        </div>
+
+        <div class="map">
+            MAP
+        </div>
+    </div>
+
+    <div class="section-title">CONTACT FORM</div>
+
+    <div class="contact">
+<label>
+  Name <span class="required-badge">required</span>
+</label>
+<input type="text">
+
+<label>
+  Email <span class="required-badge">required</span>
+</label>
+<input type="email">
+
+<label>
+  Message <span class="required-badge">required</span>
+</label>
+<textarea rows="5"></textarea>
+
+        <div class="submit">SUBMIT</div>
+    </div>
+
+</div>
+
+</body>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const root = document.getElementById("storeCarousel");
+  if (!root) return;
+
+  const track = root.querySelector(".carousel-track");
+  const slides = root.querySelectorAll(".carousel-slide");
+  const prevBtn = root.querySelector(".carousel-btn.prev");
+  const nextBtn = root.querySelector(".carousel-btn.next");
+  const dots = root.querySelectorAll(".dot");
+
+  // ✅ デバッグ用（動いてるか確認）
+  console.log("carousel init", { track: !!track, slides: slides.length });
+
+  if (!track || slides.length === 0) return;
+
+  let index = 0;
+
+  function update(){
+    track.style.transform = `translateX(-${index * 100}%)`;
+    dots.forEach((d,i)=>d.classList.toggle("active", i === index));
+  }
+
+  prevBtn.addEventListener("click", () => {
+    index = (index - 1 + slides.length) % slides.length;
+    update();
+  });
+
+  nextBtn.addEventListener("click", () => {
+    index = (index + 1) % slides.length;
+    update();
+  });
+
+  dots.forEach((dot, i) => {
+    dot.addEventListener("click", () => {
+      index = i;
+      update();
+    });
+  });
+
+  update();
+});
+</script>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".faq-question").forEach((q) => {
+    q.addEventListener("click", () => {
+      const answer = q.nextElementSibling;
+
+      document.querySelectorAll(".faq-answer").forEach((a) => {
+        if (a !== answer) a.style.display = "none";
+      });
+
+      document.querySelectorAll(".faq-question").forEach((item)=>{
+        if(item !== q) item.classList.remove("active");
+      });
+
+      if(answer.style.display === "block"){
+        answer.style.display = "none";
+        q.classList.remove("active");
+      }else{
+        answer.style.display = "block";
+        q.classList.add("active");
+      }
+    });
+  });
+});
+</script>
+
+</html>
