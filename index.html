@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Ikebukuro Kadoebi is a foreign-friendly soapland in Tokyo, just 5 minutes from Ikebukuro Station. Walk-ins welcome. Credit cards accepted.">
-  <title>Ikebukuro Soapland Kadoebi | Foreign-Friendly Tokyo Soapland</title>
+  <meta name="description" content="POLARIS is a foreign-friendly soapland in Ikebukuro, Tokyo. 3 minutes from Ikebukuro Station. Credit cards accepted. Walk-ins welcome.">
+  <title>Polaris Soapland Kadoebi | Foreign-Friendly Tokyo Soapland Near Ikebukuro Station</title>
 
 
   <!-- Fonts -->
@@ -17,24 +17,36 @@
 {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "name": "Ikebukuro Kadoebi",
+  "@id": "https://www.kadoebi.co.jp/extra/polaris/#store",
+  "name": "POLARIS",
+  "url": "https://www.kadoebi.co.jp/extra/polaris/",
+  "telephone": "+81-3-3985-6112",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "1-43-15 Higashi-Ikebukuro",
+    "streetAddress": "1-42-13 Higashi-Ikebukuro",
     "addressLocality": "Toshima-ku",
     "addressRegion": "Tokyo",
     "postalCode": "170-0013",
     "addressCountry": "JP"
   },
-  "telephone": "+81-3-3981-0567",
-  "openingHours": "Mo-Su 09:00-24:00",
-  "url": "https://example.com"
+  "areaServed": ["Ikebukuro", "Tokyo"],
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday","Tuesday","Wednesday",
+      "Thursday","Friday","Saturday","Sunday"
+    ],
+    "opens": "09:00",
+    "closes": "24:00"
+  }],
+  "sameAs": ["https://instagram.com/soapland_polaris"],
+  "priceRange": "¥28,000 – ¥51,000",
+  "inLanguage": "en"
 }
 </script>
 
 
 <style>
-
 body{
   margin:0;
   font-family: Helvetica, 'Inter', sans-serif;
@@ -61,10 +73,18 @@ body{
   background-size:100% 100%;
 }
 
+ /* logo */
 .site-logo{
   height: 50px;
   width:auto;
   display:block;
+}
+
+ /* instagram */
+.insta-icon{
+  width:28px;
+  height:28px;
+  object-fit:contain;
 }
 
 /* Banner */
@@ -89,14 +109,13 @@ body{
 /* Section title */
 .section-title{
   text-align:center;
-  color:#CABF28;
+  color:#B086CF;
   font-weight:700;
   margin:45px 0 22px;
   font-family:'Inter', sans-serif;
   font-size:1.4rem;
   letter-spacing:0.07em;
 }
-
 
 .banner-link{
   display:block;
@@ -108,7 +127,6 @@ body{
   height:auto;
   display:block;
 }
-
 
 /* About */
 .about{
@@ -129,7 +147,7 @@ body{
 }
 
 .system-item:nth-child(odd){
-  background: rgba(202,191,40,0.4);
+  background: rgba(176,134,207,0.4);
   color:#333;
 }
 
@@ -150,7 +168,7 @@ body{
 
 /* FAQ */
 .accordion-button:hover{
-  background: rgba(202,191,40,0.15);
+  background: rgba(176,134,207,0.15);
 }
 
 .accordion-button:focus{
@@ -162,7 +180,7 @@ body{
 }
 
 .accordion-button::after{
-  filter: hue-rotate(35deg) saturate(1.2);
+  filter: hue-rotate(260deg) saturate(1.2);
 }
 
 .accordion-body{
@@ -170,8 +188,9 @@ body{
   font-size:15px;
   line-height:1.6;
 }
-    .faq-q{
-  color:#CABF28;
+
+.faq-q{
+  color:#B086CF;
   font-weight:700;
 }
 
@@ -204,7 +223,7 @@ body{
 }
 
 .phone-link:hover{
-  color:#CABF28;
+  color:#B086CF;
 }
 
 .map-wrap{
@@ -218,7 +237,6 @@ body{
   height:100%;
   border:0;
 }
-
 
 /* Contact */
 .contact{
@@ -242,7 +260,6 @@ body{
   margin:0 auto;
 }
 
-
 .required-badge{
   display:inline-block;
   background:#d81c1c;
@@ -255,7 +272,7 @@ body{
 }
 
 .submit-btn{
-  background: linear-gradient(90deg, #44334f 0%, #CABF28 100%);
+  background: linear-gradient(90deg, #44334f 0%, #B086CF 100%);
   border:none;
   border-radius:999px;
   font-weight:600;
@@ -290,11 +307,11 @@ body{
   border-radius:999px;
   border:0;
   margin:0 4px;
-  background:rgba(202,191,40,0.35);
+  background:rgba(176,134,207,0.35);
 }
 
 .carousel-indicators .active{
-  background:#CABF28;
+  background:#B086CF;
 }
 
 /* トップへ戻る */
@@ -306,7 +323,7 @@ body{
   height: 46px;
   padding: 0;
   border-radius: 999px;
-  background: #CABF28;
+  background: #B086CF;
   color: #fff;
   font-weight: 700;
   line-height: 46px;
@@ -327,7 +344,7 @@ body{
 }
 
 .back-to-top:hover{
-  background:#b9ae24; /* 少し濃く */
+  background:#9e6fbe; /* 少し濃く */
   color:#fff;
 }
 
@@ -367,13 +384,22 @@ body{
 <header class="bg-white border-bottom sticky-top">
   <div class="d-flex justify-content-between align-items-center p-3">
 
-<!--Logo -->
-    <div class="fw-bold">
-  <img src="img/logo.jpg" alt="Ikebukuro Kadoebi" class="site-logo">
+<!-- Logo -->
+<div class="fw-bold">
+  <a href="https://www.kadoebi.co.jp/extra/polaris/" target="_blank" rel="noopener noreferrer">
+    <img src="img/logo.jpg" alt="Ikebukuro Kadoebi" class="site-logo">
+  </a>
 </div>
+
 
     <!-- 右：Instagram + ハンバーガー -->
     <div class="d-flex align-items-center gap-3">
+
+<a href="https://instagram.com/soapland_polaris"
+   target="_blank"
+   rel="noopener noreferrer">
+  <img src="img/instagram.jpg" alt="Instagram" class="insta-icon">
+</a>
 
       <button class="btn p-0 border-0"
               type="button"
@@ -431,31 +457,30 @@ body{
 
 </div>
 
-    <!-- ABOUT -->
      <h1 class="visually-hidden">
-Ikebukuro Kadoebi Foreign-Friendly Soapland in Tokyo
+POLARIS Ikebukuro | Foreign-Friendly Soapland in Tokyo Ikebukuro
 </h1>
 
-  <h2 id="about" class="section-title">ABOUT US</h2>
+ <!-- ABOUT -->
+   <h2 id="about" class="section-title">ABOUT US</h2>
     <div class="about fs-6 text-center">
-      Only a 5-minute walk from Ikebukuro East Exit.
-Discover genuine, high-quality service offered by our charming companions.
-A diverse lineup is always on duty, ready to satisfy both newcomers and seasoned guests alike.
-Information about other Kadoebi Group venues is also available. We look forward to welcoming you!
+      Japan’s oldest soapland group, Kadoebi, proudly presents Polaris in Ikebukuro.
+      A paradise for adults where young and cute girls gather.
+      Located just 3 minutes walk from the East Exit of Ikebukuro Station.
     </div>
 
 <!-- BANNERS2 -->
 <div class="px-3 pb-4">
   <div class="d-grid gap-3">
 
-    <a href="https://www.kadoebi.co.jp/ikekado/n_schedule-1-1.html"
+    <a href="https://www.kadoebi.co.jp/polaris/n_schedule-3-1.html"
        class="banner-link"
        target="_blank"
        rel="noopener noreferrer">
       <img src="img/lineup.jpg" alt="Today's lineup">
     </a>
 
-    <a href="https://www.kadoebi.co.jp/ikekado/n_schedule-1-1.html"
+    <a href="https://www.kadoebi.co.jp/polaris/cast_list.html"
        class="banner-link"
        target="_blank"
        rel="noopener noreferrer">
@@ -531,15 +556,19 @@ Information about other Kadoebi Group venues is also available. We look forward 
 
 </div>
 
-    <!-- SYSTEM -->
-   <h2 id="system" class="section-title">SYSTEM</h2>
+     <!-- SYSTEM -->
+    <h2 id="system" class="section-title">SYSTEM</h2>
     <div class="system-wrap fs-6">
-      <div class="system-item">60min</div>
-      <div class="system-item">¥29,000</div>
-      <div class="system-item">80min</div>
-      <div class="system-item">¥35,000</div>
-       <div class="system-item">Nomination fee</div>
-      <div class="system-item">¥1,000</div>
+      <div class="system-item">50min</div>
+      <div class="system-item">¥28,000</div>
+      <div class="system-item">70min</div>
+      <div class="system-item">¥33,000</div>
+      <div class="system-item">100min</div>
+      <div class="system-item">¥46,000</div>
+      <div class="system-item">120min</div>
+      <div class="system-item">¥51,000</div>
+      <div class="system-item">Nomination fee</div>
+      <div class="system-item">¥2000 (50min/70min)　¥4000 (100min/120min)</div>
     </div>
 
     <!-- DISCOUNT -->
@@ -634,7 +663,7 @@ reservations can only be made in person. Reservations can be made starting the d
       </div>
     </div>
 
-    <!--  英語管理 -->
+    <!-- ⑥ 英語管理 -->
 <div class="accordion-item border-top border-bottom-0 border-start-0 border-end-0">
   <h2 class="accordion-header">
     <button class="accordion-button collapsed px-0" type="button"
@@ -653,53 +682,48 @@ reservations can only be made in person. Reservations can be made starting the d
   </div>
 </div>
 
-<!-- INFO -->
-<h2 id="info" class="section-title">SHOP INFO</h2>
+    <!-- INFO -->
+    <h2 id="info" class="section-title">SHOP INFO</h2>
+    <div class="info fs-6">
 
-<div class="info fs-6">
+      <div class="info-item">
+        <strong>Name</strong><br>
+        POLARIS
+      </div>
 
-  <div class="info-item">
-    <strong>Name</strong><br>
-    Ikebukuro Kadoebi
-  </div>
+      <div class="info-item">
+        <strong>Type of Business</strong><br>
+        Soapland
+      </div>
 
-  <div class="info-item">
-    <strong>Type of Business</strong><br>
-    Soapland
-  </div>
+      <div class="info-item">
+        <strong>Business Hours</strong><br>
+        <p>
+          9:00 – 24:00
+          <span class="last-reception">(Last reception at 23:00)</span>
+        </p>
+      </div>
 
-  <div class="info-item">
-    <strong>Business Hours</strong><br>
-    9:00 – 24:00<br>
-    <span class="last-reception">Last reception at 23:00</span>
-  </div>
+      <div class="info-item">
+        <strong>Phone</strong><br>
+        <a href="tel:0339856112" class="phone-link">03-3985-6112</a>
+      </div>
 
-  <div class="info-item">
-    <div class="info-label"><strong>Phone</strong></div>
-    <div class="info-value">
-      <a href="tel:0339810567" class="phone-link">03-3981-0567</a>
-    </div>
-  </div>
+      <div class="info-item">
+        <strong>Address</strong><br>
+        1-42-13 Higashi-Ikebukuro, Toshima-ku, Tokyo<br>
+        <span class="access">3-minute walk from Ikebukuro Sta. East Exit (North)</span>
+      </div>
 
-  <div class="info-item">
-    <strong>Address</strong><br>
-    1-43-15 Higashi-Ikebukuro, Toshima-ku, Tokyo<br>
-    <span class="access">5-minute walk from Ikebukuro Sta. East Exit (North)</span>
-  </div>
+      <div class="map-wrap">
+        <iframe
+          src="https://www.google.com/maps?q=1-42-13+Higashi-Ikebukuro,+Toshima-ku,+Tokyo&output=embed"
+          loading="lazy"
+          allowfullscreen>
+        </iframe>
+      </div>
 
-  <div class="map-wrap">
-    <iframe 
-      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6477.473440856603!2d139.71404300000003!3d35.732693!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d4036ece915%3A0xa62a9a38538da9fc!2z5rGg6KKL6KeS5rW36ICB!5e0!3m2!1sja!2sjp!4v1771137462469!5m2!1sja!2sjp"
-      allowfullscreen=""
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
-  </div>
-
-</div><!-- /.info -->
-
-
-
+    </div><!-- /.info -->
 
 
     <!-- CONTACT -->
@@ -716,9 +740,7 @@ reservations can only be made in person. Reservations can be made starting the d
         We are also unable to provide information regarding the availability of our cast members.
       </p>
 
-      <form action="https://docs.google.com/forms/d/e/
-1FAIpQLSdN1P4qiHXTf2RsjSBuZrf8WOpvYuQxjoeSGjZk1bhIJIjfsw
-/formResponse"
+      <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSd4g-Jnb9p9569N_2ccfWGpJS1YfIeICllqzaumXPvb3FLZSA/formResponse"
             method="post"
             target="hidden_iframe"
             onsubmit="submitted=true;">
@@ -767,7 +789,9 @@ reservations can only be made in person. Reservations can be made starting the d
 
       </form>
 
-</div><!-- /.contact -->
+    </div><!-- /.contact -->
+
+</div><!-- /.app-shell -->
 
 
 <!-- 送信後thanksページへ -->
