@@ -3,18 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>POLARIS SOAPLAND</title>
+  <meta name="description" content="Ikebukuro Kadoebi is a foreign-friendly soapland in Tokyo, just 5 minutes from Ikebukuro Station. Walk-ins welcome. Credit cards accepted.">
+  <title>Ikebukuro Soapland Kadoebi | Foreign-Friendly Tokyo Soapland</title>
 
-  <!-- Description -->
-  <meta name="description" content="POLARIS is a foreigner-friendly soapland in Ikebukuro, Tokyo (Kadoebi Group).
-Just a 3-minute walk from Ikebukuro Station East Exit.
-Open from 9:00 AM to 12:00 AM." />
 
-  <!--  Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-
 
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -23,57 +17,40 @@ Open from 9:00 AM to 12:00 AM." />
 {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "@id": "https://www.kadoebi.co.jp/extra/polaris/#store",
-  "name": "POLARIS",
-  "url": "https://www.kadoebi.co.jp/extra/polaris/",
-  "telephone": "+81-3-3985-6112",
-
+  "name": "Ikebukuro Kadoebi",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "1-42-13 Higashi-Ikebukuro",
+    "streetAddress": "1-43-15 Higashi-Ikebukuro",
     "addressLocality": "Toshima-ku",
     "addressRegion": "Tokyo",
     "postalCode": "170-0013",
     "addressCountry": "JP"
   },
-
-  "areaServed": "Ikebukuro, Tokyo",
-
-  "openingHoursSpecification": [
-    {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
-        "Monday","Tuesday","Wednesday",
-        "Thursday","Friday","Saturday","Sunday"
-      ],
-      "opens": "09:00",
-      "closes": "24:00"
-    }
-  ],
-  "priceRange": "¥¥¥",
-  "inLanguage": "en"
+  "telephone": "+81-3-3981-0567",
+  "openingHours": "Mo-Su 09:00-24:00",
+  "url": "https://example.com"
 }
 </script>
 
 
-  <style>
+<style>
 
-    body{
-      margin:0;
-      font-family: Helvetica, 'Inter', sans-serif;
-      background:#f5f5f5;
-      color:#555;
-    }
+body{
+  margin:0;
+  font-family: Helvetica, 'Inter', sans-serif;
+  background:#f5f5f5;
+  color:#555;
+}
 
-    /* 480px固定の白い本体 */
-    .app-shell{
-      max-width:480px;
-      margin:0 auto;
-      background:#fff;
-      min-height:100vh;
-    }
+/* 480px固定の白い本体 */
+.app-shell{
+  max-width:480px;
+  margin:0 auto;
+  background:#fff;
+  min-height:100vh;
+}
 
-    /* show hamburger icon without navbar */
+/* hamburger icon */
 .navbar-toggler-icon{
   display:inline-block;
   width:28px;
@@ -84,159 +61,129 @@ Open from 9:00 AM to 12:00 AM." />
   background-size:100% 100%;
 }
 
- /* logo */
 .site-logo{
   height: 50px;
   width:auto;
   display:block;
 }
 
- /* instagram */
-.insta-icon{
-  width:28px;
-  height:28px;
-  object-fit:contain;
-}
-
-    /* Banner */
-
+/* Banner */
 .banner-carousel{
   aspect-ratio: 1 / 1;
   overflow: hidden;
   background:#000;
 }
 
-/* ★ここが重要：中身にも高さを渡す */
 .banner-carousel .carousel-inner,
 .banner-carousel .carousel-item{
-  height: 100%;
+  height:100%;
 }
 
 .banner-carousel img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+/* Section title */
+.section-title{
+  text-align:center;
+  color:#CABF28;
+  font-weight:700;
+  margin:45px 0 22px;
+  font-family:'Inter', sans-serif;
+  font-size:1.4rem;
+  letter-spacing:0.07em;
 }
 
 
+.banner-link{
+  display:block;
+  text-decoration:none;
+}
 
-    /* Section title */
-    .section-title{
-      text-align:center;
-      color:#B086CF;
-      font-weight:600;
-      margin:45px 0 22px; 
-      font-family:'Inter', sans-serif;
-      font-size:1.4rem;
-       letter-spacing: 0.07em;
-    }
+.banner-link img{
+  width:100%;
+  height:auto;
+  display:block;
+}
 
-    /* Grid buttons (image cards) */
-    .grid-card{
-      height:140px;
-      color:#fff !important;
-      text-decoration:none;
-      font-family:'Inter', sans-serif;
-      background-size:cover;
-      background-position:center;
-      border-radius:0;
-      position:relative;
-      overflow:hidden;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-    }
-    .grid-card::before{
-      content:"";
-      position:absolute;
-      inset:0;
-      background:rgba(0,0,0,0.4);
-    }
-    .grid-card > span{
-      position:relative;
-      z-index:1;
-    }
 
-    /* About text */
-    .about{
-      padding:0 20px 20px;
-      line-height:1.6;
-      font-size:20px;
-    }
+/* About */
+.about{
+  padding:0 20px 20px;
+  line-height:1.6;
+  font-size:20px;
+}
 
-    /* System alternating rows */
-    .system-wrap{
-      padding:0 20px 20px;
-    }
-    .system-item{
-      text-align:center;
-      padding:12px 0;
-      margin-bottom:10px;
-    }
-    .system-item:nth-child(odd){
-      background: rgba(176, 134, 207, 0.4);
-      color:#333;
-    }
+/* System */
+.system-wrap{
+  padding:0 20px 20px;
+}
 
-    /* Discount */
-    .discount{
-      color:#d81c1c;
-      text-align:center;
-      font-size:12px;
-      padding:10px 20px 30px;
-    }
+.system-item{
+  text-align:center;
+  padding:12px 0;
+  margin-bottom:10px;
+}
 
-    /* Reservation */
-    .reservation{
-      padding:20px;
-      font-size:13px;
-      text-align:center;
-    }
+.system-item:nth-child(odd){
+  background: rgba(202,191,40,0.4);
+  color:#333;
+}
 
-    /* FAQ tweaks */
-    .accordion-button:hover{
-      background: rgba(176, 134, 207, 0.15);
-    }
-    .accordion-button:focus{
-      box-shadow:none;
-    }
-    .accordion-button:not(.collapsed){
-      background:#fff;
-    }
-    .accordion-button::after{
-      filter: hue-rotate(35deg) saturate(1.2);
-    }
-    .accordion-body{
-      color: rgba(0,0,0,0.6);
-      font-size:15px;
-      line-height:1.6;
-    }
+/* Discount */
+.discount{
+  color:#d81c1c;
+  text-align:center;
+  font-size:12px;
+  padding:10px 20px 30px;
+}
+
+/* Reservation */
+.reservation{
+  padding:20px;
+  font-size:13px;
+  text-align:center;
+}
+
+/* FAQ */
+.accordion-button:hover{
+  background: rgba(202,191,40,0.15);
+}
+
+.accordion-button:focus{
+  box-shadow:none;
+}
+
+.accordion-button:not(.collapsed){
+  background:#fff;
+}
+
+.accordion-button::after{
+  filter: hue-rotate(35deg) saturate(1.2);
+}
+
+.accordion-body{
+  color: rgba(0,0,0,0.6);
+  font-size:15px;
+  line-height:1.6;
+}
     .faq-q{
-  color:#B086CF;
+  color:#CABF28;
   font-weight:700;
 }
 
+/* Info */
+.info{
+  padding:0 20px 30px;
+}
 
-    /* Info */
-    .info{
-      padding:0 20px 30px;
-
-    }
-    .info-item{
+.info-item{
   padding-bottom:12px;
   margin-bottom:12px;
   border-bottom:1px solid rgba(0,0,0,0.08);
-}
-
-.phone-link{
-  color:inherit;
-  text-decoration:none;
-  font-weight:600;
-}
-
-.phone-link:hover{
- color:#B086CF;
 }
 
 .last-reception{
@@ -250,15 +197,33 @@ Open from 9:00 AM to 12:00 AM." />
   color:#777;
 }
 
-.map{
+.phone-link{
+  color:inherit;
+  text-decoration:none;
+  font-weight:600;
+}
+
+.phone-link:hover{
+  color:#CABF28;
+}
+
+.map-wrap{
   width:100%;
   height:300px;
+  margin-top:10px;
+}
+
+.map-wrap iframe{
+  width:100%;
+  height:100%;
   border:0;
 }
 
+
 /* Contact */
 .contact{
-  padding:40px 20px;
+  padding:30px 20px;
+  background:#fafafa; 
 }
 
 .contact-lead{
@@ -277,67 +242,112 @@ Open from 9:00 AM to 12:00 AM." />
   margin:0 auto;
 }
 
-    .required-badge{
-      display:inline-block;
-      background:#d81c1c;
-      color:white;
-      font-size:12px;
-      padding:2px 8px;
-      border-radius:4px;
-      margin-left:8px;
-      font-family:'Inter', sans-serif;
-    }
 
-    .submit-btn{
-      background: linear-gradient(90deg, #44334f 0%, #b086cf 100%);
-      border:none;
-      border-radius:999px;
-      font-weight:600;
-      font-size:18px;
-      padding:14px 0;
-      font-family:'Inter', sans-serif;
-    }
+.required-badge{
+  display:inline-block;
+  background:#d81c1c;
+  color:white;
+  font-size:12px;
+  padding:2px 8px;
+  border-radius:4px;
+  margin-left:8px;
+  font-family:'Inter', sans-serif;
+}
 
-    /* Carousel caption style to match yours */
-    .carousel-caption-custom{
-      position:absolute;
-      left:50%;
-      bottom:12px;
-      transform:translateX(-50%);
-      background:rgba(255,255,255,0.9);
-      color:#333;
-      padding:6px 14px;
-      font-family:'Inter', sans-serif;
-      font-size:14px;
-    }
+.submit-btn{
+  background: linear-gradient(90deg, #44334f 0%, #CABF28 100%);
+  border:none;
+  border-radius:999px;
+  font-weight:600;
+  font-size:18px;
+  padding:14px 0;
+  font-family:'Inter', sans-serif;
+}
 
-    /* Hide arrows if you want (your original was display:none) */
-    .carousel-control-prev,
-    .carousel-control-next{
-      display:none;
-    }
+/* Carousel caption */
+.carousel-caption-custom{
+  position:absolute;
+  left:50%;
+  bottom:12px;
+  transform:translateX(-50%);
+  background:rgba(255,255,255,0.9);
+  color:#333;
+  padding:6px 14px;
+  font-family:'Inter', sans-serif;
+  font-size:14px;
+}
 
-    /* Dots color */
-    .carousel-indicators [data-bs-target]{
-      width:8px;
-      height:8px;
-      border-radius:999px;
-      border:0;
-      margin:0 4px;
-      background:rgba(176,134,207,0.35);
-    }
-    .carousel-indicators .active{
-      background:#B086CF;
-    }
-  </style>
+/* Hide arrows */
+.carousel-control-prev,
+.carousel-control-next{
+  display:none;
+}
+
+/* Dots */
+.carousel-indicators [data-bs-target]{
+  width:8px;
+  height:8px;
+  border-radius:999px;
+  border:0;
+  margin:0 4px;
+  background:rgba(202,191,40,0.35);
+}
+
+.carousel-indicators .active{
+  background:#CABF28;
+}
+
+/* トップへ戻る */
+.back-to-top{
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  width: 46px;
+  height: 46px;
+  padding: 0;
+  border-radius: 999px;
+  background: #CABF28;
+  color: #fff;
+  font-weight: 700;
+  line-height: 46px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: opacity .2s ease, transform .2s ease, visibility .2s ease;
+  z-index: 9999;
+}
+
+.back-to-top.show{
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top:hover{
+  background:#b9ae24; /* 少し濃く */
+  color:#fff;
+}
+
+
+</style>
+
 </head>
 
 <body>
   <!-- OFFCANVAS MENU -->
 <div class="offcanvas offcanvas-end" tabindex="-1" id="menu" aria-labelledby="menuLabel">
-  <div class="offcanvas-header">
-    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-  </div>
+<div class="offcanvas-header">
+  <h5 class="offcanvas-title visually-hidden" id="menuLabel">Menu</h5>
+  <button type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close">
+  </button>
+</div>
+
 
   <div class="offcanvas-body">
     <div class="list-group list-group-flush">
@@ -357,28 +367,26 @@ Open from 9:00 AM to 12:00 AM." />
 <header class="bg-white border-bottom sticky-top">
   <div class="d-flex justify-content-between align-items-center p-3">
 
-    <!--Logo -->
+<!--Logo -->
     <div class="fw-bold">
   <img src="img/logo.jpg" alt="Ikebukuro Kadoebi" class="site-logo">
 </div>
 
     <!-- 右：Instagram + ハンバーガー -->
-  <div class="d-flex align-items-center gap-3">
+    <div class="d-flex align-items-center gap-3">
 
-  <a href="https://instagram.com/soapland_polaris" target="_blank">
-    <img src="img/instagram.jpg" alt="Instagram" class="insta-icon">
-  </a>
+      <button class="btn p-0 border-0"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
 
-  <button class="btn p-0 border-0"
-          type="button"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#menu">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-</div>
   </div>
 </header>
+
+
 
 
  <!-- BANNER CAROUSEL -->
@@ -391,53 +399,73 @@ Open from 9:00 AM to 12:00 AM." />
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="0" class="active"></button>
     <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="1"></button>
-    <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="2"></button>
+    <!-- <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="2"></button>-->
   </div>
 
   <!-- ● 画像 -->
-<div class="carousel-inner">
+  <div class="carousel-inner">
 
-  <div class="carousel-item active">
-    <a href="link1.html">
-      <img src="img/banner.jpg" alt="">
-    </a>
-  </div>
+<div class="carousel-item active">
+  <a href="https://www.kadoebi.co.jp/ikekado/cast_detail-5069.html"
+     target="_blank"
+     rel="noopener noreferrer">
+    <img src="img/banner.jpg" alt="">
+  </a>
+</div>
+
 
   <div class="carousel-item">
-    <a href="link2.html">
-      <img src="img/banner.jpg" alt="">
-    </a>
+      <img src="img/banner2.jpg" alt="">
   </div>
 
+    <!-- 
   <div class="carousel-item">
     <a href="link3.html">
-      <img src="img/banner.jpg" alt="">
+      <img src="img/banner3.jpg" alt="">
     </a>
   </div>
+  -->
 
-</div>
+
+  </div>
 
 </div>
 
     <!-- ABOUT -->
-   <h2 id="about" class="section-title">ABOUT US</h2>
+     <h1 class="visually-hidden">
+Ikebukuro Kadoebi Foreign-Friendly Soapland in Tokyo
+</h1>
+
+  <h2 id="about" class="section-title">ABOUT US</h2>
     <div class="about fs-6 text-center">
-      Japan’s oldest soapland group, Kadoebi, proudly presents Polaris in Ikebukuro.
-      A paradise for adults where young and cute girls gather.
-      Located just 3 minutes walk from the East Exit of Ikebukuro Station.
+      Only a 5-minute walk from Ikebukuro East Exit.
+Discover genuine, high-quality service offered by our charming companions.
+A diverse lineup is always on duty, ready to satisfy both newcomers and seasoned guests alike.
+Information about other Kadoebi Group venues is also available. We look forward to welcoming you!
     </div>
 
-    <!-- GRID BUTTONS -->
-    <div class="px-3 pb-4">
-      <div class="d-grid gap-3">
-        <a href="#" class="grid-card" style="background-image:url('img1.jpg');">
-          <span>出勤情報</span>
-        </a>
-        <a href="#" class="grid-card" style="background-image:url('img2.jpg');">
-          <span>女の子一覧</span>
-        </a>
-      </div>
-    </div>
+<!-- BANNERS2 -->
+<div class="px-3 pb-4">
+  <div class="d-grid gap-3">
+
+    <a href="https://www.kadoebi.co.jp/ikekado/n_schedule-1-1.html"
+       class="banner-link"
+       target="_blank"
+       rel="noopener noreferrer">
+      <img src="img/lineup.jpg" alt="Today's lineup">
+    </a>
+
+    <a href="https://www.kadoebi.co.jp/ikekado/n_schedule-1-1.html"
+       class="banner-link"
+       target="_blank"
+       rel="noopener noreferrer">
+      <img src="img/allcompanions.jpg" alt="Companions">
+    </a>
+
+  </div>
+</div>
+
+
 
 <!-- CAROUSEL (Bootstrap) -->
 <div class="px-3 pb-4">
@@ -457,18 +485,18 @@ Open from 9:00 AM to 12:00 AM." />
       </div>
 
       <div class="carousel-item position-relative">
-        <img src="img/s2.jpg" class="d-block w-100" alt="Reception area">
+        <img src="img/s1.jpg" class="d-block w-100" alt="Reception area">
         <div class="carousel-caption-custom">Reception area</div>
       </div>
 
       <div class="carousel-item position-relative">
-        <img src="img/s3.jpg" class="d-block w-100" alt="Hallway">
+        <img src="img/s1.jpg" class="d-block w-100" alt="Hallway">
         <div class="carousel-caption-custom">Hallway</div>
       </div>
 
     </div>
 
-    <!-- ドット（画像の下） -->
+    <!-- ドット -->
     <div class="carousel-indicators position-static justify-content-center gap-1 mt-3 mb-0">
 
       <button type="button"
@@ -490,7 +518,7 @@ Open from 9:00 AM to 12:00 AM." />
 
     </div>
 
-    <!-- 矢印（アクセシビリティ用・CSSで非表示） -->
+    <!-- 矢印  -->
     <button class="carousel-control-prev" type="button" data-bs-target="#storeCarousel" data-bs-slide="prev">
       <span class="carousel-control-prev-icon"></span>
     </button>
@@ -504,18 +532,14 @@ Open from 9:00 AM to 12:00 AM." />
 </div>
 
     <!-- SYSTEM -->
-    <h2 id="system" class="section-title">SYSTEM</h2>
+   <h2 id="system" class="section-title">SYSTEM</h2>
     <div class="system-wrap fs-6">
-      <div class="system-item">50min</div>
-      <div class="system-item">¥28,000</div>
-      <div class="system-item">70min</div>
-      <div class="system-item">¥33,000</div>
-      <div class="system-item">100min</div>
-      <div class="system-item">¥46,000</div>
-      <div class="system-item">120min</div>
-      <div class="system-item">¥51,000</div>
-      <div class="system-item">Nomination fee</div>
-      <div class="system-item">¥2000 (50min/70min)　¥4000 (100min/120min)</div>
+      <div class="system-item">60min</div>
+      <div class="system-item">¥29,000</div>
+      <div class="system-item">80min</div>
+      <div class="system-item">¥35,000</div>
+       <div class="system-item">Nomination fee</div>
+      <div class="system-item">¥1,000</div>
     </div>
 
     <!-- DISCOUNT -->
@@ -525,12 +549,11 @@ Open from 9:00 AM to 12:00 AM." />
     </div>
 
     <!-- RESERVATION -->
-    <h2 id="reservation" class="section-title">RESERVATION</h2>
+  <h2 id="reservation" class="section-title">RESERVATION</h2>
     <div class="reservation fs-6">
-       Reservations are accepted by phone or in person. <strong>We don't accept reservations via email or DM. </strong>If you don't speak Japanese,
+     Reservations are accepted by phone or in person. <strong>We don't accept reservations via email or DM. </strong>If you don't speak Japanese,
 reservations can only be made in person. Reservations can be made starting the day before. Walk-ins are always welcome!!!
     </div>
-
 <!-- FAQ (Bootstrap Accordion) -->
 <h2 id="faq" class="section-title">FAQ</h2>
 <div class="px-3 pb-4">
@@ -538,27 +561,27 @@ reservations can only be made in person. Reservations can be made starting the d
 
     <!-- ① -->
     <div class="accordion-item border-top border-bottom-0 border-start-0 border-end-0">
-      <h3 class="accordion-header">
+      <h2 class="accordion-header">
         <button class="accordion-button collapsed px-0" type="button"
           data-bs-toggle="collapse" data-bs-target="#faq1">
           <span class="faq-q">Q.</span> Do you accept credit cards?
         </button>
-      </h3>
+      </h2>
       <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
         <div class="accordion-body px-0 pt-0">
-          We accept cash only.
+          We accept credit cards. (QR payments are not available.)
         </div>
       </div>
     </div>
 
     <!-- ② -->
     <div class="accordion-item border-top border-bottom-0 border-start-0 border-end-0">
-      <h3 class="accordion-header">
+      <h2 class="accordion-header">
         <button class="accordion-button collapsed px-0" type="button"
           data-bs-toggle="collapse" data-bs-target="#faq2">
           <span class="faq-q">Q.</span> Are there any additional fees besides the listed price?
         </button>
-      </h3>
+      </h2>
       <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
         <div class="accordion-body px-0 pt-0">
           There are no extra charges beyond the listed price.
@@ -568,12 +591,12 @@ reservations can only be made in person. Reservations can be made starting the d
 
     <!-- ③ -->
     <div class="accordion-item border-top border-bottom-0 border-start-0 border-end-0">
-      <h3 class="accordion-header">
+      <h2 class="accordion-header">
         <button class="accordion-button collapsed px-0" type="button"
           data-bs-toggle="collapse" data-bs-target="#faq3">
           <span class="faq-q">Q.</span> Can I visit without a reservation?
         </button>
-      </h3>
+      </h2>
       <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
         <div class="accordion-body px-0 pt-0">
           Yes, walk-ins are welcome.
@@ -583,12 +606,12 @@ reservations can only be made in person. Reservations can be made starting the d
 
     <!-- ④ タトゥー -->
     <div class="accordion-item border-top border-bottom-0 border-start-0 border-end-0">
-      <h3 class="accordion-header">
+      <h2 class="accordion-header">
         <button class="accordion-button collapsed px-0" type="button"
           data-bs-toggle="collapse" data-bs-target="#faq4">
           <span class="faq-q">Q.</span> I have tattoos. Can I still enter?
         </button>
-      </h3>
+      </h2>
       <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
         <div class="accordion-body px-0 pt-0">
           Yes, customers with tattoos are welcome.
@@ -598,12 +621,12 @@ reservations can only be made in person. Reservations can be made starting the d
 
     <!-- ⑤ 衛生管理 -->
     <div class="accordion-item border-top border-bottom-0 border-start-0 border-end-0">
-      <h3 class="accordion-header">
+      <h2 class="accordion-header">
         <button class="accordion-button collapsed px-0" type="button"
           data-bs-toggle="collapse" data-bs-target="#faq5">
           <span class="faq-q">Q.</span> How is your hygiene management?
         </button>
-      </h3>
+      </h2>
       <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
         <div class="accordion-body px-0 pt-0">
           We maintain strict hygiene standards, so you can visit us with confidence.
@@ -611,121 +634,141 @@ reservations can only be made in person. Reservations can be made starting the d
       </div>
     </div>
 
-  </div>
-</div>
-
-
-    <!-- INFO -->
-   <h2 id="info" class="section-title">SHOP INFO</h2>
-    <div class="info fs-6">
-      <div class="info-item">
-        <strong>Name</strong><br>
-        POLARIS
-      </div>
-
-      <div class="info-item">
-        <strong>Type of Business</strong><br>
-        Soapland
-      </div>
-
-      <div class="info-item">
-        <strong>Business Hours</strong><br>
-       <p>
-  9:00 AM – 12:00 AM
-  <span class="last-reception">(Last reception at 11:00 PM)</span>
-</p>
-      </div>
-
-      <div class="info-item">
-  <div class="info-label"><strong>Phone</strong></div>
-  <div class="info-value">
-    <a href="tel:0339856112" class="phone-link">03-3985-6112</a>
-  </div>
-</div>
-<div class="info-item">
-  <strong>Address</strong><br>
-  1-42-13 Higashi-Ikebukuro, Toshima-ku, Tokyo<br>
-  <span class="access">3-minute walk from Ikebukuro Sta. East Exit (North)</span>
-</div>
-
-   <iframe
-  src="https://www.google.com/maps?q=1-42-13+Higashi-Ikebukuro,+Toshima-ku,+Tokyo&output=embed"
-  width="100%"
-  height="300"
-  style="border:0;"
-  allowfullscreen=""
-  loading="lazy">
-</iframe>
-</div>
-
-
-
-
-<!-- CONTACT -->
-<h2 id="contact" class="section-title">CONTACT FORM</h2>
-
-<div class="contact">
-
-<p class="contact-lead">
-  If you have any questions, please feel free to contact us.
-</p>
-
-<p class="contact-note text-center mt-1 mb-5">
-  We do not accept reservations via the contact form.<br>
-  We are also unable to provide information regarding the availability of our cast members.
-</p>
-
-
-  <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSd4g-Jnb9p9569N_2ccfWGpJS1YfIeICllqzaumXPvb3FLZSA/formResponse"
-        method="post"
-        target="hidden_iframe"
-        onsubmit="submitted=true;">
-
-    <!-- NAME -->
-    <label class="form-label">
-      Name <span class="required-badge">required</span>
-    </label>
-    <input type="text"
-           name="entry.1506871634"
-           class="form-control mb-3"
-           placeholder="A nickname is also acceptable."
-           required>
-
-    <!-- EMAIL -->
-    <label class="form-label">
-      Email <span class="required-badge">required</span>
-    </label>
-    <input type="email"
-           name="entry.776611074"
-           class="form-control mb-3"
-           required>
-
-    <!-- COUNTRY -->
-    <label class="form-label">
-      Your country
-    </label>
-    <input type="text"
-           name="entry.1233253634"
-           class="form-control mb-3">
-
-    <!-- MESSAGE -->
-    <label class="form-label">
-      Message <span class="required-badge">required</span>
-    </label>
-    <textarea rows="5"
-              name="entry.2071656823"
-              class="form-control mb-3"
-              required></textarea>
-
-    <!-- SUBMIT -->
-    <button class="btn submit-btn text-white w-50 d-block mx-auto mt-3"
-            type="submit">
-      SUBMIT
+    <!--  英語管理 -->
+<div class="accordion-item border-top border-bottom-0 border-start-0 border-end-0">
+  <h2 class="accordion-header">
+    <button class="accordion-button collapsed px-0" type="button"
+      data-bs-toggle="collapse" data-bs-target="#faq6">
+      <span class="faq-q">Q.</span> Do you have any staff or companions who speak English?
     </button>
-
-  </form>
-
+  </h2>
+  <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+    <div class="accordion-body px-0 pt-0">
+    Currently, we do not have any staff or companions who can speak English fluently; however, we will do our very best to ensure that every guest enjoys a wonderful and memorable time with us.
+    </div>
+  </div>
 </div>
+
+
+  </div>
+</div>
+
+<!-- INFO -->
+<h2 id="info" class="section-title">SHOP INFO</h2>
+
+<div class="info fs-6">
+
+  <div class="info-item">
+    <strong>Name</strong><br>
+    Ikebukuro Kadoebi
+  </div>
+
+  <div class="info-item">
+    <strong>Type of Business</strong><br>
+    Soapland
+  </div>
+
+  <div class="info-item">
+    <strong>Business Hours</strong><br>
+    9:00 – 24:00<br>
+    <span class="last-reception">Last reception at 23:00</span>
+  </div>
+
+  <div class="info-item">
+    <div class="info-label"><strong>Phone</strong></div>
+    <div class="info-value">
+      <a href="tel:0339810567" class="phone-link">03-3981-0567</a>
+    </div>
+  </div>
+
+  <div class="info-item">
+    <strong>Address</strong><br>
+    1-43-15 Higashi-Ikebukuro, Toshima-ku, Tokyo<br>
+    <span class="access">5-minute walk from Ikebukuro Sta. East Exit (North)</span>
+  </div>
+
+  <div class="map-wrap">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6477.473440856603!2d139.71404300000003!3d35.732693!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d4036ece915%3A0xa62a9a38538da9fc!2z5rGg6KKL6KeS5rW36ICB!5e0!3m2!1sja!2sjp!4v1771137462469!5m2!1sja!2sjp"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+
+</div><!-- /.info -->
+
+
+
+
+
+    <!-- CONTACT -->
+    <h2 id="contact" class="section-title">CONTACT FORM</h2>
+
+    <div class="contact">
+
+      <p class="contact-lead">
+        If you have any questions, please feel free to contact us.
+      </p>
+
+      <p class="contact-note text-center mt-1 mb-5">
+        We do not accept reservations via the contact form.<br>
+        We are also unable to provide information regarding the availability of our cast members.
+      </p>
+
+      <form action="https://docs.google.com/forms/d/e/
+1FAIpQLSdN1P4qiHXTf2RsjSBuZrf8WOpvYuQxjoeSGjZk1bhIJIjfsw
+/formResponse"
+            method="post"
+            target="hidden_iframe"
+            onsubmit="submitted=true;">
+
+        <!-- NAME -->
+        <label class="form-label">
+          Name <span class="required-badge">required</span>
+        </label>
+        <input type="text"
+               name="entry.1506871634"
+               class="form-control mb-3"
+               placeholder="A nickname is also acceptable."
+               required>
+
+        <!-- EMAIL -->
+        <label class="form-label">
+          Email <span class="required-badge">required</span>
+        </label>
+        <input type="email"
+               name="entry.776611074"
+               class="form-control mb-3"
+               required>
+
+        <!-- COUNTRY -->
+        <label class="form-label">
+          Your country
+        </label>
+        <input type="text"
+               name="entry.1233253634"
+               class="form-control mb-3">
+
+        <!-- MESSAGE -->
+        <label class="form-label">
+          Message <span class="required-badge">required</span>
+        </label>
+        <textarea rows="5"
+                  name="entry.2071656823"
+                  class="form-control mb-3"
+                  required></textarea>
+
+        <!-- SUBMIT -->
+        <button class="btn submit-btn text-white w-50 d-block mx-auto mt-3"
+                type="submit">
+          SUBMIT
+        </button>
+
+      </form>
+
+</div><!-- /.contact -->
+
 
 <!-- 送信後thanksページへ -->
 <script>
@@ -740,33 +783,66 @@ function page_transition(){
 
 </div><!-- /.app-shell -->
 
+<!-- Topへ戻る -->
+<button id="backToTop"
+        class="btn back-to-top"
+        type="button"
+        aria-label="Back to top">
+  ↑
+</button>
+
+
+
 <!-- Bootstrap JS (bundle includes Popper) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
+
+  // --- Offcanvas menu smooth scroll ---
   const menuEl = document.getElementById("menu");
-  if (!menuEl) return;
+  if (menuEl) {
+    const offcanvas = bootstrap.Offcanvas.getOrCreateInstance(menuEl);
 
-  const offcanvas = bootstrap.Offcanvas.getOrCreateInstance(menuEl);
+    menuEl.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener("click", (e) => {
+        const hash = link.getAttribute("href");
+        const target = document.querySelector(hash);
+        if (!target) return;
 
-  menuEl.querySelectorAll('a[href^="#"]').forEach(link => {
-    link.addEventListener("click", (e) => {
-      const hash = link.getAttribute("href");
-      const target = document.querySelector(hash);
-      if (!target) return;
+        e.preventDefault();
+        offcanvas.hide();
 
-      e.preventDefault();
-      offcanvas.hide();
-
-      menuEl.addEventListener("hidden.bs.offcanvas", () => {
-        target.scrollIntoView({ behavior: "smooth", block: "start" });
-        history.replaceState(null, "", hash);
-      }, { once: true });
+        menuEl.addEventListener("hidden.bs.offcanvas", () => {
+          target.scrollIntoView({ behavior: "smooth", block: "start" });
+          history.replaceState(null, "", hash);
+        }, { once: true });
+      });
     });
-  });
+  }
+
+  // --- Back to top ---
+  const btn = document.getElementById("backToTop");
+  if (btn) {
+    const showAfter = 250;
+
+    const toggle = () => {
+      if (window.scrollY > showAfter) btn.classList.add("show");
+      else btn.classList.remove("show");
+    };
+
+    toggle();
+    window.addEventListener("scroll", toggle, { passive: true });
+
+    btn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
+
 });
 </script>
+
+
 
 </body>
 </html>
